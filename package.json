@@ -1,7 +1,7 @@
 {
-	"name": "n8n-nodes-elevenlabs",
+	"name": "n8n-nodes-elevenlabs-zulivan",
 	"version": "0.0.5",
-	"description": "Complete implementation of ElevenLabs AI voice generation into n8n workflows.",
+	"description": "UPDATED VERSION of ElevenLabs AI voice generation into n8n workflows.",
 	"keywords": [
 		"n8n-community-node-package",
 		"n8n",
@@ -15,12 +15,12 @@
 	"license": "MIT",
 	"homepage": "https://n8n.ninja",
 	"author": {
-		"name": "n8ninja",
+		"name": "Zulivan",
 		"email": "n8n.ninja@gmail.com"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/n8n-ninja/n8n-nodes-elevenlabs"
+		"url": "https://github.com/Zulivan/n8n-nodes-elevenlabs"
 	},
 	"main": "index.js",
 	"scripts": {
