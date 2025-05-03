@@ -1,4 +1,4 @@
-import { INodeType, INodeTypeDescription, NodeConnectionType } from 'n8n-workflow';
+import { INodeType, INodeTypeDescription } from 'n8n-workflow';
 import { listSearch } from './methods/listSearch';
 import { loadOptions } from './methods/loadOptions';
 // import { debugRequest } from './methods/debugRequest';
@@ -19,8 +19,8 @@ export class ElevenLabs implements INodeType {
 		defaults: {
 			name: 'ElevenLabs',
 		},
-		inputs: [NodeConnectionType.Main],
-		outputs: [NodeConnectionType.Main],
+		inputs: ['main'],
+		outputs: ['main'],
 		credentials: [
 			{
 				name: 'elevenLabsApi',

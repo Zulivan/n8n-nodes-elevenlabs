@@ -22,7 +22,7 @@ export const SpeechOperations: INodeProperties[] = [
 			{
 				name: 'Text to Speech',
 				value: 'text-to-speech',
-				action: 'Text to Speech',
+				action: 'Text to speech',
 				description: 'Generate a speech from a text',
 				routing: {
 					send: {
@@ -31,7 +31,7 @@ export const SpeechOperations: INodeProperties[] = [
 				},
 			},
 			{
-				name: 'Voice changer',
+				name: 'Voice Changer',
 				value: 'voice-changer',
 				action: 'Voice changer',
 				description: 'Transform audio from one voice to another',
@@ -365,7 +365,7 @@ export const SpeechOperations: INodeProperties[] = [
 			// optimize_streaming_latency
 			{
 				displayName: 'Streaming Latency',
-				description: 'Turn on latency optimizations at some cost of quality. Values: 0 (default - no optimizations), 1 (normal - 50% improvement), 2 (strong - 75% improvement), 3 (max), 4 (max with text normalizer off)',
+				description: 'Turn on latency optimizations at some cost of quality. Values: 0 (default - no optimizations), 1 (normal - 50% improvement), 2 (strong - 75% improvement), 3 (max), 4 (max with text normalizer off).',
 				name: 'optimize_streaming_latency',
 				type: 'number',
 				default: 0,
@@ -389,12 +389,12 @@ export const SpeechOperations: INodeProperties[] = [
 				options: [
 					{ name: 'MP3 (44.1kHz, 128kbps)', value: 'mp3_44100_128' },
 					{ name: 'MP3 (44.1kHz, 192kbps)', value: 'mp3_44100_192' },
-					{ name: 'PCM (16-bit, 44.1kHz)', value: 'pcm_16000' },
-					{ name: 'PCM (16-bit, 22.05kHz)', value: 'pcm_22050' },
-					{ name: 'PCM (16-bit, 24kHz)', value: 'pcm_24000' },
-					{ name: 'PCM (24-bit, 44.1kHz)', value: 'pcm_24000_24' },
-					{ name: 'μ-law (8-bit, 8kHz)', value: 'ulaw_8000' },
-				],
+					{ name: 'PCM (16-Bit, 22.05kHz)', value: 'pcm_22050' },
+					{ name: 'PCM (16-Bit, 24kHz)', value: 'pcm_24000' },
+					{ name: 'PCM (16-Bit, 44.1kHz)', value: 'pcm_16000' },
+					{ name: 'PCM (24-Bit, 44.1kHz)', value: 'pcm_24000_24' },
+					{ name: 'μ-Law (8-Bit, 8kHz)', value: 'ulaw_8000' },
+				  ],				  
 				default: 'mp3_44100_128',
 				displayOptions: {
 					show: {
@@ -405,7 +405,7 @@ export const SpeechOperations: INodeProperties[] = [
 			// language_code - New parameter from documentation
 			{
 				displayName: 'Language Code',
-				description: 'Language code (ISO 639-1) used to enforce a language for the model. IMPORTANT: Currently ONLY works with Turbo v2.5 and Flash v2.5 models!',
+				description: 'Language code (ISO 639-1) used to enforce a language for the model. IMPORTANT: Currently ONLY works with Turbo v2.5 and Flash v2.5 models!.',
 				name: 'language_code',
 				type: 'string',
 				default: '',
@@ -426,7 +426,7 @@ export const SpeechOperations: INodeProperties[] = [
 				typeOptions: {
 					loadOptionsMethod: 'listModels',
 				},
-				default: 'eleven_monolingual_v1',
+				default: '',
 				displayOptions: {
 					show: {
 						'/operation': ['text-to-speech'],
@@ -443,7 +443,7 @@ export const SpeechOperations: INodeProperties[] = [
 				typeOptions: {
 					loadOptionsMethod: 'listModels',
 				},
-				default: 'eleven_english_sts_v2',
+				default: '',
 				displayOptions: {
 					show: {
 						'/operation': ['voice-changer'],
@@ -537,7 +537,7 @@ export const SpeechOperations: INodeProperties[] = [
 			// Enable Logging (new parameter)
 			{
 				displayName: 'Enable Logging',
-				description: 'Whether to enable logging. False means zero retention mode (history features unavailable)',
+				description: 'Whether to enable logging. False means zero retention mode (history features unavailable).',
 				name: 'enable_logging',
 				type: 'boolean',
 				default: true,
@@ -550,7 +550,7 @@ export const SpeechOperations: INodeProperties[] = [
 			// Text Normalization (new parameter)
 			{
 				displayName: 'Text Normalization',
-				description: 'Controls text normalization. Auto (system decides), On (always applied), Off (skipped)',
+				description: 'Controls text normalization. Auto (system decides), On (always applied), Off (skipped).',
 				name: 'apply_text_normalization',
 				type: 'options',
 				options: [
@@ -568,7 +568,7 @@ export const SpeechOperations: INodeProperties[] = [
 			// Use PVC as IVC (new parameter)
 			{
 				displayName: 'Use PVC as IVC',
-				description: 'If true, won\'t use PVC version of the voice for generation but the IVC version',
+				description: 'Whether to use the IVC version of the voice instead of the PVC version for generation',
 				name: 'use_pvc_as_ivc',
 				type: 'boolean',
 				default: false,
@@ -639,7 +639,7 @@ export const SpeechOperations: INodeProperties[] = [
 			// Transcript model_id
 			{
 				displayName: 'Transcript Model ID',
-				description: 'Model to use for transcription. Currently only "scribe_v1" is available',
+				description: 'Model to use for transcription. Currently only "scribe_v1" is available.',
 				name: 'transcript_model_id',
 				type: 'string',
 				default: 'scribe_v1',
@@ -652,7 +652,7 @@ export const SpeechOperations: INodeProperties[] = [
 			// Language Code for Transcript
 			{
 				displayName: 'Language Code',
-				description: 'ISO-639-1 or ISO-639-3 language code of the audio. If not provided, language is auto-detected',
+				description: 'ISO-639-1 or ISO-639-3 language code of the audio. If not provided, language is auto-detected.',
 				name: 'transcript_language_code',
 				type: 'string',
 				default: '',
@@ -666,7 +666,7 @@ export const SpeechOperations: INodeProperties[] = [
 			// Tag Audio Events
 			{
 				displayName: 'Tag Audio Events',
-				description: 'Whether to tag audio events like (laughter), (footsteps), etc. in the transcription',
+				description: 'Whether to tag audio events like (laughter), (footsteps), etc. in the transcription.',
 				name: 'tag_audio_events',
 				type: 'boolean',
 				default: true,
@@ -748,7 +748,7 @@ export const SpeechOperations: INodeProperties[] = [
 			// Sound Effects - Prompt Influence
 			{
 				displayName: 'Prompt Influence',
-				description: 'Controls how closely the sound follows the prompt. Higher values = less variation but more faithful to prompt',
+				description: 'Controls how closely the sound follows the prompt. Higher values = less variation but more faithful to prompt.',
 				name: 'prompt_influence',
 				type: 'number',
 				default: 0.7,
